@@ -23,7 +23,7 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
 
         // full constructor
         public Student(int studentID, string program, DateTime dateRegistered,
-                       string name, string email, string phoneNumber)
+                        string name, string email, string phoneNumber)
             : base(name, email, phoneNumber)
         {
             StudentID = studentID;
@@ -34,14 +34,18 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
         // id‑only constructor
         public Student(int studentID) : this(studentID, DEFAULT_PROGRAM, DEFAULT_DATE, "", "", "") { }
 
-        // compare students by id
+        /// <summary>
+        /// compares two Students by StudentID
+        /// </summary>
         public int CompareTo(Student other)
         {
             if (other == null) return 1;
             return StudentID.CompareTo(other.StudentID);
         }
 
-        // check equality by id
+        /// <summary>
+        /// checks equality by StudentID
+        /// </summary>
         public override bool Equals(object obj)
         {
             if (obj is Student other)
@@ -51,13 +55,17 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
             return false;
         }
 
-        // generate hash code from id
+        /// <summary>
+        /// returns hash based on StudentID
+        /// </summary>
         public override int GetHashCode()
         {
             return StudentID.GetHashCode();
         }
 
-        // == operator using id
+        /// <summary>
+        /// compares two Students by StudentID
+        /// </summary>
         public static bool operator ==(Student a, Student b)
         {
             if (ReferenceEquals(a, b)) return true;
@@ -65,7 +73,9 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
             return a.StudentID == b.StudentID;
         }
 
-        // != operator using id
+        /// <summary>
+        /// returns true when StudentID values differ
+        /// </summary>
         public static bool operator !=(Student a, Student b)
         {
             return !(a == b);
