@@ -9,14 +9,14 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
     public class Address
     {
         // default values
-        private const int DEFAULT_STREETNUM = 0;
+        private const string DEFAULT_STREETNUM = "";
         private const string DEFAULT_STREETNAME = "";
         private const string DEFAULT_SUBURB = "";
         private const string DEFAULT_POSTCODE = "";
         private const string DEFAULT_STATE = "";
 
         // address properties
-        public int StreetNum { get; set; }
+        public string StreetNum { get; set; }
         public string StreetName { get; set; }
         public string Suburb { get; set; }
         public string Postcode { get; set; }
@@ -26,7 +26,7 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
         public Address() : this(DEFAULT_STREETNUM, DEFAULT_STREETNAME, DEFAULT_SUBURB, DEFAULT_POSTCODE, DEFAULT_STATE) { }
 
         // full constructor
-        public Address(int streetNum, string streetName, string suburb, string postcode, string state)
+        public Address(string streetNum, string streetName, string suburb, string postcode, string state)
         {
             StreetNum = streetNum;
             StreetName = streetName;

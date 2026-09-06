@@ -17,22 +17,24 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
         public string Name { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
+        public Address Address { get; set; }
 
         // no‑arg constructor
-        public Person() : this(DEFAULT_NAME, DEFAULT_EMAIL, DEFAULT_PHONE) { }
+        public Person() : this(DEFAULT_NAME, DEFAULT_EMAIL, DEFAULT_PHONE, new Address()) { }
 
         // full constructor
-        public Person(string name, string email, string phoneNumber)
+        public Person(string name, string email, string phoneNumber, Address address)
         {
             Name = name;
             Email = email;
             PhoneNumber = phoneNumber;
+            Address = address;
         }
 
         // display person details
         public override string ToString()
         {
-            return $"{Name}, {Email}, {PhoneNumber}";
+            return $"{Name}, {Email}, {PhoneNumber} {Address}";
         }
     }
 }
