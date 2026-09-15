@@ -9,8 +9,8 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
     public class Subject
     {
         // default values
-        private const string DEFAULT_CODE = "";
-        private const string DEFAULT_NAME = "";
+        private const string DEFAULT_CODE = "UNKOWN_CODE";
+        private const string DEFAULT_NAME = "UNKNOWN_SUBJECT";
         private const decimal DEFAULT_COST = 0m;
 
         // subject properties

@@ -10,8 +10,9 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
     {
         // default values
         private static readonly DateTime DEFAULT_DATE = DateTime.MinValue;
-        private const string DEFAULT_GRADE = "";
-        private const string DEFAULT_SEMESTER = "";
+        private const string DEFAULT_GRADE = "Unknown Grade";
+        private const string DEFAULT_SEMESTER = "Unknown Semester";
+        private static readonly Subject DEFAULT_SUBJECT = new Subject();
 
         // enrollment properties
         public DateTime DateEnrolled { get; set; }

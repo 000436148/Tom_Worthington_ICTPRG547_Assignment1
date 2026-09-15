@@ -9,11 +9,11 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
     public class Address
     {
         // default values
-        private const string DEFAULT_STREETNUM = "";
-        private const string DEFAULT_STREETNAME = "";
-        private const string DEFAULT_SUBURB = "";
-        private const string DEFAULT_POSTCODE = "";
-        private const string DEFAULT_STATE = "";
+        private const string DEFAULT_STREETNUM = "Unknown Street Number";
+        private const string DEFAULT_STREETNAME = "Unknown Street Name";
+        private const string DEFAULT_SUBURB = "Unknown Suburb";
+        private const string DEFAULT_POSTCODE = "0000";
+        private const string DEFAULT_STATE = "Unknown State";
 
         // address properties
         public string StreetNum { get; set; }

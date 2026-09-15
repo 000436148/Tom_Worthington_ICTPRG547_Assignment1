@@ -9,9 +9,9 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
     public class Person
     {
         // default values
-        private const string DEFAULT_NAME = "";
-        private const string DEFAULT_EMAIL = "";
-        private const string DEFAULT_PHONE = "";
+        private const string DEFAULT_NAME = "Unknown Name";
+        private const string DEFAULT_EMAIL = "Unknown Email";
+        private const string DEFAULT_PHONE = "0000000000";
 
         // person properties
         public string Name { get; set; }

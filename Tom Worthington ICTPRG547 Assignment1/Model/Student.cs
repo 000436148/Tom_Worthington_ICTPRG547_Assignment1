@@ -10,27 +10,46 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
     {
         // default values
         private const int DEFAULT_ID = 0;
-        private const string DEFAULT_PROGRAM = "";
+        private const string DEFAULT_PROGRAM = "Unknown Program";
         private static readonly DateTime DEFAULT_DATE = DateTime.MinValue;
+
+        private const string DEFAULT_NAME = "Unknown Name";
+        private const string DEFAULT_EMAIL = "Unknown Email";
+        private const string DEFAULT_PHONE = "0000000000";
 
         // student properties
         public int StudentID { get; set; }
         public string Program { get; set; }
         public DateTime DateRegistered { get; set; }
+        public Enrollment Enrollment { get; set; }
 
         // no‑arg constructor
-        public Student() : this(DEFAULT_ID, DEFAULT_PROGRAM, DEFAULT_DATE, "", "", "", new Address()) { }
+        public Student()
+            : this(DEFAULT_ID, DEFAULT_PROGRAM, DEFAULT_DATE,
+                   DEFAULT_NAME, DEFAULT_EMAIL, DEFAULT_PHONE,
+                   new Address(), new Enrollment())
+        {
+        }
 
         // full constructor
-        public Student(int studentID, string program, DateTime dateRegistered, string name, string email, string phoneNumber, Address address) : base(name, email, phoneNumber, address)
+        public Student(int studentID, string program, DateTime dateRegistered,
+                       string name, string email, string phoneNumber,
+                       Address address, Enrollment enrollment)
+            : base(name, email, phoneNumber, address)
         {
             StudentID = studentID;
             Program = program;
             DateRegistered = dateRegistered;
+            Enrollment = enrollment;
         }
 
         // id‑only constructor
-        public Student(int studentID) : this(studentID, DEFAULT_PROGRAM, DEFAULT_DATE, "", "", "", new Address()) { }
+        public Student(int studentID)
+            : this(studentID, DEFAULT_PROGRAM, DEFAULT_DATE,
+                   DEFAULT_NAME, DEFAULT_EMAIL, DEFAULT_PHONE,
+                   new Address(), new Enrollment())
+        {
+        }
 
         /// <summary>
         /// compares two Students by StudentID
@@ -57,11 +76,11 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
             // check reference
             if (ReferenceEquals(this, obj))
                 return true;
-
+            
             // check type
             if (obj.GetType() != GetType())
                 return false;
-
+            
             // compare value
             Student other = (Student)obj;
             return StudentID == other.StudentID;
@@ -103,7 +122,8 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
         // display student details
         public override string ToString()
         {
-            return $"ID: {StudentID}, Program: {Program}, Registered: {DateRegistered}, Address: {Address}, {base.ToString()}";
+            return $"ID: {StudentID}, Program: {Program}, Registered: {DateRegistered}, " +
+                   $"Enrollment: {Enrollment}, Name: {Name}, Email: {Email}, Phone: {PhoneNumber}, Address: {Address}";
         }
     }
 }
