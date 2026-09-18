@@ -19,7 +19,7 @@ namespace Tom_Worthington_ICTPRG547_Assignment1
             Address addr2 = new Address("12A", "King William Street", "Adelaide", "5000", "SA");
             Address addr3 = new Address("7B", "North Terrace", "Adelaide", "5000", "SA");
 
-            // create sample entrollments
+            // create sample enrollments
             Enrollment e1 = new Enrollment();
             Enrollment e2 = new Enrollment();
             Enrollment e3 = new Enrollment();
