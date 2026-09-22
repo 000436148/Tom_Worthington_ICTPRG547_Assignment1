@@ -123,7 +123,7 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
         public override string ToString()
         {
             return $"ID: {StudentID}, Program: {Program}, Registered: {DateRegistered}, " +
-                   $"Enrollment: {Enrollment}, Name: {Name}, Email: {Email}, Phone: {PhoneNumber}, Address: {Address}";
+                   $"Enrollment: {Enrollment}, Person: {base.ToString()}";
         }
     }
 }
