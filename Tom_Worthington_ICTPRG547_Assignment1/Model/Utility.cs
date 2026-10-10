@@ -9,7 +9,19 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
 {
     public static class Utility
     {
-        // linear search through an array to find a target value
+        /// <summary>
+        /// linear search through an array to find a target value
+        /// </summary>
+        /// <typeparam name="T">any type that can be compared</typeparam>
+        /// <param name="array">the array to search</param>
+        /// <param name="target">the item to find</param>
+        /// <returns>index of the item or -1 if not found</returns>
+        /// <remarks>
+        /// pseudocode:
+        /// for each item in array
+        ///     if item equals target then return index
+        /// return -1
+        /// </remarks>
         public static int LinearSearchArray<T>(T[] array, T target) where T : IComparable<T>
         {
             // loops through each item in the array
@@ -26,7 +38,23 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
             return -1;
         }
 
-        // binary search through a sorted array
+        /// <summary>
+        /// binary search through a sorted array
+        /// </summary>
+        /// <typeparam name="T">any type that can be compared</typeparam>
+        /// <param name="array">the sorted array to search</param>
+        /// <param name="target">the item to find</param>
+        /// <returns>index of the item or -1 if not found</returns>
+        /// <remarks>
+        /// pseudocode:
+        /// set low to start of array
+        /// set high to end of array
+        /// while low <= high
+        ///     find middle index
+        ///     compare middle item with target
+        ///     adjust search range
+        /// return -1
+        /// </remarks>
         public static int BinarySearchArray<T>(T[] array, T target) where T : IComparable<T>
         {
             int low = 0;
@@ -59,7 +87,21 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
             return -1;
         }
 
-        // sorts an array in ascending order using insertion sort
+        /// <summary>
+        /// sorts an array in ascending order using insertion sort
+        /// </summary>
+        /// <typeparam name="T">any type that can be compared</typeparam>
+        /// <param name="array">the array to sort</param>
+        /// <remarks>
+        /// pseudocode:
+        /// for i from 1 to end
+        ///     key = array[i]
+        ///     j = i - 1
+        ///     while j >= 0 and array[j] > key
+        ///         move item right
+        ///         j--
+        ///     insert key
+        /// </remarks>
         public static void SortAscending<T>(T[] array) where T : IComparable<T>
         {
             // loops through each item starting from index 1
@@ -80,7 +122,21 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
             }
         }
 
-        // sorts an array in descending order using insertion sort
+        /// <summary>
+        /// sorts an array in descending order using insertion sort
+        /// </summary>
+        /// <typeparam name="T">any type that can be compared</typeparam>
+        /// <param name="array">the array to sort</param>
+        /// <remarks>
+        /// pseudocode:
+        /// for i from 1 to end
+        ///     key = array[i]
+        ///     j = i - 1
+        ///     while j >= 0 and array[j] < key
+        ///         move item right
+        ///         j--
+        ///     insert key
+        /// </remarks>
         public static void SortDescending<T>(T[] array) where T : IComparable<T>
         {
             // loops through each item starting from index 1

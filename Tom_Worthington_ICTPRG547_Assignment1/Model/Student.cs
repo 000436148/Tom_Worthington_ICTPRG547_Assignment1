@@ -119,6 +119,42 @@ namespace Tom_Worthington_ICTPRG547_Assignment1.Model
             return !(a == b);
         }
 
+        /// <summary>
+        /// compares two Students for greater than by StudentID
+        /// </summary>
+        public static bool operator >(Student a, Student b)
+        {
+            if (a is null || b is null) return false;
+            return a.StudentID > b.StudentID;
+        }
+
+        /// <summary>
+        /// compares two Students for less than by StudentID
+        /// </summary>
+        public static bool operator <(Student a, Student b)
+        {
+            if (a is null || b is null) return false;
+            return a.StudentID < b.StudentID;
+        }
+
+        /// <summary>
+        /// compares two Students for greater than or equal by StudentID
+        /// </summary>
+        public static bool operator >=(Student a, Student b)
+        {
+            if (a is null || b is null) return false;
+            return a.StudentID >= b.StudentID;
+        }
+
+        /// <summary>
+        /// compares two Students for less than or equal by StudentID
+        /// </summary>
+        public static bool operator <=(Student a, Student b)
+        {
+            if (a is null || b is null) return false;
+            return a.StudentID <= b.StudentID;
+        }
+
         // display student details
         public override string ToString()
         {
